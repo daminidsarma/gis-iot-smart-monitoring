@@ -34,43 +34,6 @@ Copy code
 
 ---
 
-## 🧪 Case Studies
-
-### 1) Campus Environmental Heatmaps (Temp–Humidity–Gas)
-- **Goal**: Visualize temperature, humidity, and gas data as spatial heatmaps.  
-- **Benefit**: Identify hotspots, ventilation issues, and intervention areas.  
-- **Output**: `maps/exports/iitk_env_heatmap.html` (interactive).  
-
-### 2) Noise Pollution Mapping
-- **Goal**: Interpolate decibel values from IoT/mobile nodes into continuous surfaces.  
-- **Benefit**: Support planning of quiet zones around hostels and libraries.  
-- **Output**: `maps/exports/iitk_noise_map.html` (interactive).  
-
-### 3) Fire-Escape Route Simulation (Dual-Criteria)
-- **Goal**: Compute evacuation routes balancing **gas concentration** and **distance**.  
-- **Benefit**: Provide rapid situational awareness and safer evacuation planning.  
-- **Output**: `maps/exports/iitk_fire_escape_dual_criteria.html` (interactive).  
-- **Notebook**: `notebooks/Fire_Escape.ipynb`.  
-
----
-
-## 🗃️ Data Schema (Example)
-
-| field         | type     | description                                  |
-|---------------|----------|----------------------------------------------|
-| timestamp     | datetime | ISO 8601 timestamp (e.g., 2025-09-04T20:10)  |
-| node_id       | string   | Unique sensor/node identifier                |
-| lat, lon      | float    | WGS84 coordinates                            |
-| temperature_c | float    | °C                                           |
-| humidity_pct  | float    | %                                            |
-| gas_ppm       | float    | Gas concentration (PPM)                      |
-| noise_db      | float    | A-weighted decibels                          |
-| notes         | string   | Optional remarks                             |
-
-> Store raw logs under `data/sensors/` and use `src/processing/` scripts to prepare cleaned datasets.
-
----
-
 ## ⚙️ Requirements
 
 Minimal dependencies (extend as needed):
