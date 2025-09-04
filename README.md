@@ -73,8 +73,6 @@ Copy code
 
 ## ⚙️ Requirements
 
-- Python **3.10+**
-
 Minimal dependencies (extend as needed):
 ```txt
 jupyter
